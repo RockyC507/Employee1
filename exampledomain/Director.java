@@ -11,7 +11,7 @@ public class Director extends Manager {
     return budget;
   }
   public double getBonus(){
-    return this.baseBonus* calcPerMultiplier();
+    return baseBonus* calcPerMultiplier();
   }
   @Override
   public String toString() {

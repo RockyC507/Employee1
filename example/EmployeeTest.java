@@ -39,14 +39,16 @@ public class EmployeeTest {
       ((Admin)emps[1]).setHours(180);
     for (int i=0;i<emps.length;i++)
       System.out.println(emps[i]);
-
+      System.out.println();
     for (int i=0;i<emps.length;i++){
       System.out.println(emps[i].getName()+"本月薪資"+emps[i].getPay()+"元");
-      System.out.println();
-      if (emps[i] instanceof RegularStaff)
+     System.out.println();
+      if (emps[i] instanceof RegularStaff){
 
         System.out.println("年終獎金: "+((RegularStaff)emps[i]).getBonus()+"元");
         System.out.println("尾牙摸彩摸中: "+RegularStaff.getLuckDraw());
+        System.out.println();
+      }
       }
         }
 }
