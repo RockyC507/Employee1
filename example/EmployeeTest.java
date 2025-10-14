@@ -6,15 +6,16 @@ import exampledomain.Employee;
 import exampledomain.Engineer;
 import exampledomain.Manager;
 import exampledomain.RegularStaff;
+import exampledomain.Branch;
 
 public class EmployeeTest {
   public static void main(String[] args) {
     Employee[] emps=new Employee[5];
-    emps[0]= new Admin("Sean","A123456789",50000);
-    emps[1]= new Admin("Amy","B65789211",70000);
-    emps[2]= new Engineer("David","C9988776655",80000);
-    emps[3]= new Manager("Louis","D369854712",100000,"Tw Sales");
-    emps[4]= new Director("Nicole","E1596358741",120000,"Global Sales",1000000);
+    emps[0]= new Admin("Sean","A123456789",50000,Branch.Taipei);
+    emps[1]= new Admin("Amy","B65789211",70000,Branch.London);
+    emps[2]= new Engineer("David","C9988776655",80000,Branch.Tokyo);
+    emps[3]= new Manager("Louis","D369854712",100000,Branch.Taipei,"TW sales");
+    emps[4]= new Director("Nicole","E1596358741",120000,Branch.Paris,"Global Sales",1000000);
     
     // for (int i=0;i<emps.length;i++)
     // System.out.println(emps[i]);

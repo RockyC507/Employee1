@@ -5,10 +5,11 @@ import java.text.NumberFormat;
   private int empId;
   private String name="John";
   private String ssn="A123456789";
+  protected Branch branch;
   protected double salary=26400;
-  protected NumberFormat formatter=NumberFormat.getCurrencyInstance();
+  protected NumberFormat formatter=NumberFormat.getInstance();
 
-  public Employee(String name,String ssn,double salary){
+  public Employee(String name,String ssn,double salary,Branch branch){
     this.empId=nextId++;
     if (name!=null && name.length()!=0)
       this.name=name;
@@ -16,6 +17,7 @@ import java.text.NumberFormat;
       this.ssn=ssn;
     if (salary>26400)
       this.salary=salary;
+    this.branch=branch;
   }
   public abstract double getPay();
   
@@ -59,6 +61,9 @@ import java.text.NumberFormat;
   public double getsalary(){
     return salary;
   }
+  public Branch getBranch() {
+    return this.branch;
+}
   public void setName(String name){
     if (name!=null && name.length()!=0)
       this.name=name;
@@ -79,7 +84,7 @@ import java.text.NumberFormat;
            "編號: "+this.empId+"\n"+
            "姓名: "+this.name+"\n"+
            "ssn: "+this.ssn+"\n"+
-           "薪水: "+this.formatter.format(this.salary)+"元";
+           "薪水: "+this.branch.getCurrency()+formatter.format(this.salary)+"元";
   }
 
   

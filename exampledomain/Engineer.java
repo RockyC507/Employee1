@@ -3,8 +3,8 @@ package exampledomain;
 public class Engineer extends Employee implements RegularStaff{
   private String[] skills;
   private int skillCount;
-  public Engineer(String name,String ssn,double salary){
-    super(name, ssn, salary);
+  public Engineer(String name,String ssn,double salary,Branch branch){
+    super(name, ssn, salary,branch);
     skills=new String[5];
     skillCount=0;
   }
